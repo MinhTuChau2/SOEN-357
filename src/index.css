@@ -76,7 +76,7 @@ section {
 .toolbar {
   position: fixed;
   top: 1rem; /* top-4 */
-  left: 50%;
+  left: 1%;
   transform: translateX(-50%);
   z-index: 50;
   background-color: #2563eb; /* blue-600 */
@@ -138,4 +138,82 @@ section {
 
 .toolbar-dropdown li a:hover {
   background-color: #2563eb; /* blue-500 */
+}
+
+/* Hero Section */
+.hero-section {
+  @apply relative flex flex-col items-center justify-center text-center py-24 text-white;
+  @apply bg-gradient-to-r from-blue-500 to-indigo-600;
+  min-height: 25vh; /* make the hero taller */
+  overflow: hidden;
+}
+
+/* Hero Title - BIG & Centered */
+.hero-title {
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  text-align: center;
+  font-size: 5rem; /* Desktop default */
+  animation: titleSlideUp 0.9s ease forwards;
+  transition: text-shadow 0.3s ease;
+  margin: 0; /* remove default spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* Toolbar Logo */
+.toolbar img {
+  width: 40px;         /* Desktop width */
+  height: 40px;        /* Desktop height */
+  border-radius: 50%;  /* Circular */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.toolbar img:hover {
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive resizing */
+@media (max-width: 1024px) {
+  .toolbar img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar img {
+    width: 25px;
+    height: 25px;
+  }
 }
