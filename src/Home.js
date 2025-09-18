@@ -11,10 +11,10 @@ export default function Home() {
   const headerRef = useRef(null);
 
   const menuItems = [
-    { label: "Home", id: "home" },
+    { label: "Introduction", id: "introduction" },
     { label: "Problem", id: "problem" },
-    { label: "About", id: "about" },
-    { label: "Contact", id: "contact" },
+    { label: "Solution", id: "solution" },
+    { label: "Research", id: "research" },
   ];
 
   // scroll listener
@@ -110,53 +110,87 @@ export default function Home() {
 
   {/* Subtitle */}
   <p className="hero-subtitle">
-    Name of the people
+    Minhtu Chau - 40232883
   </p>
 </section>
 
 
       {/* Content */}
-      <main className="p-6 max-w-3xl mx-auto space-y-12 mt-12">
-        <section id="home">
-          <article>
-            <h2 className="text-3xl font-semibold mb-2">Introduction</h2>
-            <p className="text-gray-600">
-              A clean and smooth user interface improves user experience and
-              engagement.
-            </p>
-          </article>
-        </section>
+     <main className="p-6 max-w-5xl mx-auto space-y-16 mt-12">
+  <section id="introduction" className="content-section">
+    <article className="content-article">
+      <div className="content-text">
+        <h2 className="text-3xl font-semibold mb-2">Introduction</h2>
+        <p className="text-gray-600">
+          The user interfaces that promotes endless scrolling leads to the loss
+          of focus and self-control caused by long-term usage, and the emotional
+          consequences caused by interacting with triggering or negative
+          content.
+        </p>
+      </div>
+      <img
+        src={Logo}
+        alt="Introduction visual"
+        className="content-image"
+      />
+    </article>
+  </section>
 
-        <section id="problem">
-          <article>
-            <h2 className="text-3xl font-semibold mb-2">The Problem</h2>
-            <p className="text-gray-600">
-              Smooth animations guide the user’s eye, provide feedback, and
-              create a modern feel.
-            </p>
-          </article>
-        </section>
+  <section id="problem" className="content-section">
+    <article className="content-article">
+      <div className="content-text">
+        <h2 className="text-3xl font-semibold mb-2">The Problem</h2>
+        <p className="text-gray-600">
+         The user interfaces that promotes endless scrolling leads to the loss
+          of focus and self-control caused by long-term usage, and the emotional
+          consequences caused by interacting with triggering or negative
+          content.
+        </p>
+      </div>
+      <img
+        src={Logo}
+        alt="Problem visual"
+        className="content-image"
+      />
+    </article>
+  </section>
 
-        <section id="about">
-          <article>
-            <h2 className="text-3xl font-semibold mb-2">Our Solution</h2>
-            <p className="text-gray-600">
-              Overly complex layouts can overwhelm users. A simple,
-              well-structured design allows the content to shine.
-            </p>
-          </article>
-        </section>
+  <section id="solution" className="content-section">
+    <article className="content-article">
+      <div className="content-text">
+        <h2 className="text-3xl font-semibold mb-2">Our Solution</h2>
+        <p className="text-gray-600">
+          Overly complex layouts can overwhelm users. A simple, well-structured
+          design allows the content to shine.
+        </p>
+      </div>
+      <img
+        src={Logo}
+        alt="Solution visual"
+        className="content-image"
+      />
+    </article>
+  </section>
 
-        <section id="contact">
-          <article>
-            <h2 className="text-3xl font-semibold mb-2">Research</h2>
-            <p className="text-gray-600">
-              Reach out to us anytime — we love hearing from readers and
-              collaborators.
-            </p>
-          </article>
-        </section>
-      </main>
+  <section id="research" className="content-section">
+    <article className="content-article">
+      <div className="content-text">
+        <h2 className="text-3xl font-semibold mb-2">Research</h2>
+        <p className="text-gray-600">
+          Reach out to us anytime — we love hearing from readers and
+          collaborators.
+        </p>
+      </div>
+      <img
+        src={Logo}
+        alt="Research visual"
+        className="content-image"
+      />
+    </article>
+  </section>
+</main>
+
+
     </div>
   );
 }
