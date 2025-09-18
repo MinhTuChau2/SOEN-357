@@ -58,13 +58,13 @@ article {
   
   -webkit-mask-image: radial-gradient(
     circle, 
-    rgba(0, 0, 0, 1) 85%, 
+    rgba(0, 0, 0, 1) 90%, 
     rgba(0, 0, 0, 0) 100%
   );
   -webkit-mask-composite: destination-in;
   mask-image: radial-gradient(
     circle, 
-    rgba(0, 0, 0, 1) 85%, 
+    rgba(0, 0, 0, 1) 90%, 
     rgba(0, 0, 0, 0) 100%
   );
   mask-composite: exclude;
@@ -241,7 +241,11 @@ section {
   gap: 2rem;
   flex-wrap: wrap; /* allows stacking */
 }
-
+.content-text {
+  flex: 1;
+  min-width: 280px;
+  text-align: justify; /* <-- makes text justified */
+}
 /* Odd sections → normal order (text left, image right) */
 .content-section:nth-child(odd) .content-article {
   flex-direction: row;
