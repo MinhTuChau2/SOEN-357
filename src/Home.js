@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import Logo from './BLUM-FLOWERBOTY.png';
+import Logo from './logoforminiproject.png';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,69 +46,60 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 relative">
       {/* Floating Toolbar */}
-      {/* Floating Toolbar */}
-<AnimatePresence>
-  {showHeader && (
-    <motion.div
-      ref={headerRef}
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: -100, opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      className="toolbar flex items-center justify-between px-4 py-2 bg-blue-600 text-white rounded-full shadow-lg fixed top-4 left-1/2 transform -translate-x-1/2 z-50"
-    >
-      {/* Logo in Toolbar */}
-      <motion.img
-        src={Logo}
-        alt="Logo"
-        className="h-10 w-10 rounded-full"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
-      />
+      <AnimatePresence>
+        {showHeader && (
+          <motion.div
+            ref={headerRef}
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -100, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="toolbar"
+          >
+             <img
+                src={Logo}
+                alt="Logo"
+                className="hero-logo"
+              />
+            <div className="relative">
+              <button
+                className="toolbar-button"
+                onClick={() => setIsOpen((s) => !s)}
+                aria-expanded={isOpen}
+              >
+                {isOpen ? <X size={20} /> : <Menu size={20} />}
+              </button>
 
-      {/* Menu Button */}
-      <div className="relative">
-        <button
-          className="toolbar-button p-2 rounded-full hover:bg-blue-500"
-          onClick={() => setIsOpen((s) => !s)}
-          aria-expanded={isOpen}
-        >
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-
-        {/* Dropdown menu */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.ul
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
-              className="absolute top-full right-0 mt-2 bg-blue-700 text-white rounded-lg shadow-lg overflow-hidden"
-            >
-              {menuItems.map((item) => (
-                <li key={item.id}>
-                  <a
-                    href={`#${item.id}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToId(item.id);
-                    }}
-                    className="block px-4 py-2 hover:bg-blue-500 cursor-pointer whitespace-nowrap"
+              {/* Dropdown menu */}
+              <AnimatePresence>
+                {isOpen && (
+                  <motion.ul
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="toolbar-dropdown"
                   >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </motion.ul>
-          )}
-        </AnimatePresence>
-      </div>
-    </motion.div>
-  )}
-</AnimatePresence>
-
+                    {menuItems.map((item) => (
+                      <li key={item.id}>
+                        <a
+                          href={`#${item.id}`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            scrollToId(item.id);
+                          }}
+                        >
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* NEW Interactive Hero Header */}
     <section className="hero-section">
