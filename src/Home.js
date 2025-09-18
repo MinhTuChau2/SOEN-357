@@ -126,6 +126,7 @@ export default function Home() {
           of focus and self-control caused by long-term usage, and the emotional
           consequences caused by interacting with triggering or negative
           content.
+          
         </p>
       </div>
       <img

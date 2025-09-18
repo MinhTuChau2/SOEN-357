@@ -55,8 +55,21 @@ article {
   padding: 2.5rem;
   border-radius: 15px;
   
-  margin-bottom: 2rem;
+  
+  -webkit-mask-image: radial-gradient(
+    circle, 
+    rgba(0, 0, 0, 1) 85%, 
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-composite: destination-in;
+  mask-image: radial-gradient(
+    circle, 
+    rgba(0, 0, 0, 1) 85%, 
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-composite: exclude;
 }
+
 
 /* Container spacing */
 main {
@@ -221,13 +234,12 @@ section {
 .content-section {
   padding: 1rem;
 }
-
 .content-article {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  flex-wrap: wrap; /* stack on smaller screens */
+  flex-wrap: wrap; /* allows stacking */
 }
 
 /* Odd sections → normal order (text left, image right) */
@@ -249,10 +261,27 @@ section {
   flex: 1;
   max-width: 400px;
   border-radius: 12px;
-  
   transition: transform 0.3s ease;
 }
 
 .content-image:hover {
   transform: scale(1.01);
+}
+
+/* --- Mobile responsive adjustments --- */
+@media (max-width: 768px) {
+  .content-article {
+    flex-direction: column !important; /* stack text & image */
+    text-align: center; /* center text for smaller screens */
+  }
+
+  .content-text,
+  .content-image {
+    flex: none;
+    max-width: 100%; /* take full width */
+  }
+
+  .content-image {
+    margin: 1rem 0; /* add breathing room between text & image */
+  }
 }
