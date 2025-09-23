@@ -268,10 +268,10 @@ section {
     text-align: center;
     gap: 1.5rem;
   }
-
   .content-text p {
-    font-size: 0.95rem;
-    padding: 0 0.5rem;    /* Add side padding so text doesn't touch edges */
+    font-size: 0.7rem;
+  padding-left: 0rem; /* closer to the edge */
+  padding-right: 1.6rem;
   }
 }
 
@@ -279,7 +279,7 @@ section {
   .content-text p {
     font-size: 0.7rem;
   padding-left: 0rem; /* closer to the edge */
-  padding-right: 1.6rem;
+  padding-right: 3rem;
   }
   .content-image {
     max-width: 90%;
