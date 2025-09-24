@@ -1,4 +1,11 @@
-
+import Introduction from './sections/Introduction';
+import Problem from './sections/Problem';
+import Solution from './sections/Solution';
+import Research from './sections/Research';
+import Analysis from './sections/Analysis';
+import VisualDesign from './sections/VisualDesign';
+import FinalDesign from './sections/FinalDesign';
+import Conclusion from './sections/Conclusion';
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -15,6 +22,10 @@ export default function Home() {
     { label: "Problem", id: "problem" },
     { label: "Solution", id: "solution" },
     { label: "Research", id: "research" },
+    { label: "Analysis", id: "analysis" },
+    { label: "Visual Design", id: "visual-design" },
+    { label: "Final Design", id: "final-design" },
+    { label: "Conclusion", id: "conclusion" },
   ];
 
   // scroll listener
@@ -117,90 +128,15 @@ export default function Home() {
 
       {/* Content */}
      <main className="p-6 max-w-5xl mx-auto space-y-16 mt-12">
-  <section id="introduction" className="content-section">
-    <article className="content-article">
-      <div className="content-text">
-        <h2 className="text-3xl font-semibold mb-2">Introduction</h2>
-        <p className="text-gray-600">
-          In our age, social media has become an unavoidable tool used for connectivity,
-and entertainment for people. However, its ease of access causes important social
-and technical issues. In fact, the goals of a good UX design rely more on numbers and traction than the users
-well-being. The addictive features like endless scrolling, auto-playing, and other
-techniques that makes it hard to leave. Advanced algorithms worsen the
-problem by creating personalized feeds that lead to overconsumption. This causes
-misinformation and emotional distress to spread rapidly. For students, their attention span and their productivity are decreasing every year.
-Also, the constant notifications and nagging pressures students to 
-multitask and cause more mental damages. Furthermore, this excessive use of social media can lead to
-severe anxiety, depression, and social
-comparisons that ultimately harm mental health. These issues are primary examples 
-that shows the analysis of the relationship between social media and mental health is an important discussion topic.
-          
-        </p>
-      </div>
-      <img
-        src={Logo}
-        alt="Introduction visual"
-        className="content-image"
-      />
-      
-    </article>
-  </section>
-
-  <section id="problem" className="content-section">
-    <article className="content-article">
-      <div className="content-text">
-        <h2 className="text-3xl font-semibold mb-2">The Problem</h2>
-        <p className="text-gray-600">
-         The user interfaces that promotes endless scrolling leads to the loss
-          of focus and self-control caused by long-term usage, and the emotional
-          consequences caused by interacting with triggering or negative
-          content.
-        </p>
-      </div>
-      <img
-        src={Logo}
-        alt="Problem visual"
-        className="content-image"
-      />
-    </article>
-  </section>
-
-  <section id="solution" className="content-section">
-    <article className="content-article">
-      <div className="content-text">
-        <h2 className="text-3xl font-semibold mb-2">Our Solution</h2>
-        <p className="text-gray-600">
-          Overly complex layouts can overwhelm users. A simple, well-structured
-          design allows the content to shine.
-        </p>
-      </div>
-      <img
-        src={Logo}
-        alt="Solution visual"
-        className="content-image"
-      />
-    </article>
-  </section>
-
-  <section id="research" className="content-section">
-    <article className="content-article">
-      <div className="content-text">
-        <h2 className="text-3xl font-semibold mb-2">Research</h2>
-        <p className="text-gray-600">
-          Reach out to us anytime — we love hearing from readers and
-          collaborators.
-        </p>
-      </div>
-      <img
-        src={Logo}
-        alt="Research visual"
-        className="content-image"
-      />
-    </article>
-  </section>
+        <Introduction />
+        <Problem />
+        <Solution />
+        <Research />
+        <Analysis />
+        <VisualDesign />
+        <FinalDesign />
+        <Conclusion />
 </main>
-
-
     </div>
   );
 }
