@@ -296,8 +296,7 @@ section {
     font-size: 1.25rem; /* ~20px */
   }
   .content-image {
-    max-width: 40%;
-    width: 50%;
+    max-width: 50%;
     margin: 0 auto;
     height: auto;
   }
@@ -326,9 +325,13 @@ section {
   
  
   .content-image {
-    max-width: 40%;
-    width: 50%;
+    max-width: 70%;
+    height: auto;        /* keeps aspect ratio */
+    object-fit: contain; /* makes sure it doesn't stretch or crop */
+    display: block;      /* removes inline spacing issues */
+    margin: 0 auto;      /* centers it */
   }
+  
 
   /* Hero text */
   .hero-title {
