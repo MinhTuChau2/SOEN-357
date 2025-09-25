@@ -295,6 +295,12 @@ section {
   .content-text2 h2 {
     font-size: 1.25rem; /* ~20px */
   }
+  .content-image {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+  }
 
   
 }
@@ -320,10 +326,9 @@ section {
   
  
   .content-image {
-    max-width: 90%;
-    width: 50%;
-    margin: 0 auto;
-    height: auto;
+    max-width: 100%;
+    width: 100%;
+    
   }
 
   /* Hero text */
