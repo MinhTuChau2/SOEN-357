@@ -25,6 +25,7 @@ export default function Home() {
     { label: "Problem", id: "problem" },
     { label: "Solution", id: "solution" },
     { label: "Research", id: "research" },
+    {label: "Personas",id:"personas"},
     { label: "Analysis", id: "analysis" },
     { label: "Visual Design", id: "visual-design" },
     { label: "Final Design", id: "final-design" },
@@ -135,9 +136,9 @@ export default function Home() {
         <Problem />
         <Solution />
         <Research />
+        <Personas/>
         <Analysis />
         <VisualDesign />
-        <Personas/>
         <FinalDesign />
         <Sketch/>
         <Conclusion />

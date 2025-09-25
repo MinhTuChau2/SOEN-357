@@ -217,16 +217,31 @@ section {
 }
 .content-article {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap; /* allows stacking */
 }
-.content-text {
+
+.content-text-group {
+  display: flex;
+  flex-direction: column; /* stack vertically */
   flex: 1;
   min-width: 280px;
+}
+.content-text {
+  font-size: 1.5rem;
+  flex:1;
+  min-width: 200px;
   text-align: justify; /* <-- makes text justified */
 }
+
+.content-text2 .user-research-heading {
+  font-size: 1.1rem;   /* 14px */
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
 /* Odd sections → normal order (text left, image right) */
 .content-section:nth-child(odd) .content-article {
   flex-direction: row;
@@ -237,16 +252,16 @@ section {
   flex-direction: row-reverse;
 }
 
+
 .content-text p {
+  flex:1;
   max-width: 100%;
-  word-wrap: break-word;
-  overflow-wrap: anywhere;
   font-size: 1rem;        /* default desktop size */
   line-height: 1.6;
   text-align: justify;
-  margin: 0 auto;
-  padding: 0 1rem;        /* side padding so it doesn’t touch edges */
+       /* side padding so it doesn’t touch edges */
 }
+
 
 .content-image {
   flex: 1;
@@ -268,22 +283,45 @@ section {
     text-align: center;
     gap: 1.5rem;
   }
-  .content-text p {
-    font-size: 0.7rem;
-  padding-left: 0rem; /* closer to the edge */
-  padding-right: 1.6rem;
+  .content-text p,
+  .content-text2 p {
+    font-size: 0.8rem;
+    padding-left: 0rem;
+    padding-right: 1.5rem;
   }
+
+  /* Headings smaller on tablet */
+  .content-text h2,
+  .content-text2 h2 {
+    font-size: 1.25rem; /* ~20px */
+  }
+
+  
 }
 
 @media (max-width: 480px) {
-  .content-text p {
-    font-size: 0.7rem;
-  padding-left: 0rem; /* closer to the edge */
-  padding-right: 3rem;
+  
+
+  /* Sub-headings (User Research, User Quotes, etc.) */
+  .content-text2 .user-research-heading {
+    font-size: 1rem;   /* ~16px */
+    margin-bottom: 0.3rem;
   }
+  .content-text,
+  .content-text2 {
+    text-align: justify;   /* align text to the left */
+        /* center container itself */
+    width: 100%;        /* full width so it doesn't float */
+  }
+
+  .content-text2 .user-research-heading {
+    text-align: justify;
+  }
+  
+ 
   .content-image {
     max-width: 90%;
-    width: 100%;
+    width: 50%;
     margin: 0 auto;
     height: auto;
   }

@@ -5,8 +5,8 @@ export default function Introduction() {
     <section id="introduction" className="content-section">
       <article className="content-article">
         <div className="content-text">
-          <h2 className="text-3xl font-semibold mb-2">Introduction</h2>
-          <p className="text-gray-600">
+          <h2 >Introduction</h2>
+          <p >
             In our age, social media has become an unavoidable tool used for connectivity,
             and entertainment for people. However, its ease of access causes important social
             and technical issues. In fact, the goals of a good UX design rely more on numbers and traction than the users

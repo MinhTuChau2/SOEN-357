@@ -2,7 +2,7 @@ import Logo from '../logoforminiproject.png';
 
 export default function Personas() {
   return (
-    <section id="Personas" className="personas">
+    <section id="personas" className="personas">
         <article className="content-article">
         <div className="content-text">
           <h2 className="text-3xl font-semibold mb-2">Personas</h2>
