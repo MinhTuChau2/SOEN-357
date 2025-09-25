@@ -326,9 +326,8 @@ section {
   
  
   .content-image {
-    max-width: 70%;
-    height: auto;        /* keeps aspect ratio */
-     /* makes sure it doesn't stretch or crop */
+    max-width: 90%;  /* bigger on small screens */
+    height: auto; /* makes sure it doesn't stretch or crop */
     
   }
   
