@@ -296,7 +296,7 @@ section {
     font-size: 1.25rem; /* ~20px */
   }
   .content-image {
-    max-width: 100%;
+    max-width: 40%;
     width: 50%;
     margin: 0 auto;
     height: auto;
@@ -326,7 +326,7 @@ section {
   
  
   .content-image {
-    max-width: 100%;
+    max-width: 40%;
     width: 50%;
   }
 
