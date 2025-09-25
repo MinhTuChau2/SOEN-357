@@ -298,7 +298,7 @@ section {
   .content-image {
     max-width: 70%;
     height: auto;        /* keeps aspect ratio */
-    object-fit: contain; /* makes sure it doesn't stretch or crop */
+     /* makes sure it doesn't stretch or crop */
     
   }
 
@@ -328,7 +328,7 @@ section {
   .content-image {
     max-width: 70%;
     height: auto;        /* keeps aspect ratio */
-    object-fit: contain; /* makes sure it doesn't stretch or crop */
+     /* makes sure it doesn't stretch or crop */
     
   }
   
