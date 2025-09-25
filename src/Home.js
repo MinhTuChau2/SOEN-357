@@ -9,7 +9,10 @@ import Conclusion from './sections/Conclusion';
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import Logo from './logoforminiproject.png';
+import Logo from './Logomaybe 3.jfif';
+
+import Personas from './sections/Personas';
+import Sketch from './sections/Sketch';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -134,7 +137,9 @@ export default function Home() {
         <Research />
         <Analysis />
         <VisualDesign />
+        <Personas/>
         <FinalDesign />
+        <Sketch/>
         <Conclusion />
 </main>
     </div>

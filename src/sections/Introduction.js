@@ -1,4 +1,4 @@
-import Logo from '../logoforminiproject.png';
+import Logo from '../Logomaybe 3.jfif';
 
 export default function Introduction() {
   return (
