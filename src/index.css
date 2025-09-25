@@ -326,13 +326,12 @@ section {
   
  
   .content-image {
-    max-width: 90%;
-    height: auto;         /* keeps proportions */
-    object-fit: cover;    /* fills the box, crops if needed */
+    max-width: 90%;   /* keep it smaller on mobile */
+    width: 100%;      /* responsive width */
+    height: auto;     /* maintains aspect ratio */
     display: block;
-    margin: 0 auto;
+    margin: 0 auto;   /* center it */
   }
-  
 
   /* Hero text */
   .hero-title {
