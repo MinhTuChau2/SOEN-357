@@ -297,7 +297,7 @@ section {
   }
   .content-image {
     max-width: 100%;
-    
+    width: 50%;
     margin: 0 auto;
     height: auto;
   }
@@ -327,7 +327,7 @@ section {
  
   .content-image {
     max-width: 100%;
-    
+    width: 50%;
   }
 
   /* Hero text */
