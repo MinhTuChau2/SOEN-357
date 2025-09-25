@@ -326,12 +326,14 @@ section {
   
  
   .content-image {
-    max-width: 90%;   /* never bigger than 90% of its container */
-    width: auto;      /* don’t force full width */
-    height: auto;     /* keep proportions */
+    max-width: 90%;     /* responsive cap */
+    height: auto;       /* natural ratio */
+    width: 100%;        /* shrink responsively */
+    object-fit: contain; /* avoids distortion */
     display: block;
-    margin: 0 auto;   /* center */
+    margin: 0 auto;
   }
+  
   
 
   /* Hero text */
